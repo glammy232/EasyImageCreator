@@ -41,6 +41,7 @@ public class Texture2DKeyPressEditor : Editor
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
         image.sprite = sprite;
         image.SetNativeSize();
+        image.preserveAspect = true;
 
         // Устанавливаем родителя и позицию
         SceneView sceneView = SceneView.lastActiveSceneView;
