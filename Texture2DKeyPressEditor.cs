@@ -33,17 +33,14 @@ public class Texture2DKeyPressEditor : Editor
             return;
         }
 
-        // Создаем новый объект Image
         GameObject imageGO = new GameObject("Image");
         Image image = imageGO.AddComponent<Image>();
 
-        // Создаем Sprite из Texture2D
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
         image.sprite = sprite;
         image.SetNativeSize();
         image.preserveAspect = true;
 
-        // Устанавливаем родителя и позицию
         SceneView sceneView = SceneView.lastActiveSceneView;
         if (sceneView != null)
         {
